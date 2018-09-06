@@ -13,13 +13,16 @@ h1 { color:green;
 	padding-bottom:50px;
 	margin:0px;
 	padding-top:0px;
+	padding-top:5%;
+	padding-bottom:10%;
  }
  
  .align{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	width: 10%;
+	width: 15%;
+	
  }
  .picalign{
 	display:block;
@@ -32,8 +35,26 @@ h1 { color:green;
 	background-color:gold;
 	padding-top:30px;
 	height:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+	padding-bottom:30%;
  }
- 
+ a{color:gold;}
+ #geo{
+	color:BlueViolet;
+	align-content:center;
+ }
+ #date{
+	color:BlueViolet;
+	align:center;
+}
+.spacing{
+	margin-top:100px;
+ }
+ .buttons{
+	font-size:18px;
+	font-weight:bold;
+ }
 </style>
 <script>
 </script>
@@ -41,21 +62,21 @@ h1 { color:green;
 
 <body event>
 	<div class="head">	
-		<h1>Our team name is DROP TABLE</h1>
+		<h1>Our team name is DROP TABLE</h1><br><br>
 			
-			<p>Team member 1 name: <strong><a href="Zach.html">Zach Franke</a></strong></p>
-			<p>Team member 2 name: <strong><a href="Anjo.html">Anjo Marasigan</a></strong></p>
+			<p>Team member: <strong><a href="Zach.html">Zach Franke</a></strong></p><br><br>
+			<p>Team member: <strong><a href="Anjo.html">Anjo Marasigan</a></strong></p><br><br>
 
-			<button class="align" onclick="showPic()">Show our school</button><br><br>
+			<button class="align buttons" onclick="showPic()">Show our school</button><br><br>
 			<img class="picalign"style="display:none;" id='picture' src='fontbonne.png' />
 			
 	</div>
 	<div class="bottom">
-			<input type='button' onclick="document.getElementById('date').innerHTML=Date()" value='Get Time'>
-			<p id='date'></p>
+			<input type='button'class="align spacing buttons" onclick="document.getElementById('date').innerHTML=Date()" value='Get Time'><br>
+			<p id='date'style="text-align:center;"></p><br><br>
 
-			<button onclick="getLocation()">Find Me</button><br><br>
-			<p id='geo'></p>
+			<button class="align spacing buttons" onclick="getLocation()">Find Me</button><br><br>
+			<p id='geo' style="text-align:center"></p>
 	</div>	
 		<script>
 			var response=document.getElementById("geo");
@@ -67,7 +88,7 @@ h1 { color:green;
 			}
 			}
 			function position(loc){
-				response.innerHTML="latitude: " + loc.coords.latitude + "<br>Longitude: " + loc.coords.longitude;
+				response.innerHTML="Latitude: " + loc.coords.latitude + "<br>Longitude: " + loc.coords.longitude;
 				}
 			window.onunload=confirmExit();
 			//window.onbeforeunload=confirmExit(); Shows how the previous event handler is the one to use, this one does nothing
