@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sup</title>
+
+<style>
+h1 { color:green;
+ text-align: center;}
+ p {color: red; font-size: 20px; }
+</style>
+<script>
+</script>
+</head>
+
+<body event>
+<h1>Our team name is DROP TABLE</h1>
+<p>Team member1 name: <strong><a href="Zach.html">Zach Franke</a></strong></p>
+<p>Team member 2 name: <strong><a href="Anjo.html">Anjo Marasigan</a></strong></p>
+<input type='button' onclick="document.getElementById('date').innerHTML=Date()" value='Get Time'>
+<p id='date'></p>
+
+<p id='geo'></p>
+<button onclick="getLocation()">Find Me</button><br><br>
+<button onclick="showPic()">Show Picture</button><br><br>
+<img style="display:none;" id='picture' src='fontbonne.png' />
+<script>
+	var response=document.getElementById("geo");
+	function getLocation(){
+		if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(position);
+	}
+	else{response.innerHTML="Geolocation is not available from this device or browser.";
+	}
+	}
+	function position(loc){
+		response.innerHTML="latitude: " + loc.coords.latitude + "<br>Longitude: " + loc.coords.longitude;
+		}
+	window.onunload=confirmExit();
+	//window.onbeforeunload=confirmExit(); Shows how the previous event handler is the one to use, this one does nothing
+	function confirmExit(){
+		return "Don't leave me";	
+	}
+	function showPic() {
+		var sourceOfPicture = "fontbonne.png";
+		var img = document.getElementById('picture')
+		img.src = sourceOfPicture.replace('90x90', '225x225');
+		img.style.display = "block";
+	}  
+  
+</script>
+
+</body>
+
+</html>
