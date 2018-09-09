@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Group page</title>
+	<title>Group page</title>
 
-<style>
-*{margin:0px; padding:0px;}
-h1 { color:gold;
- text-align: center;}
- h3 {color: gold;}
- p {color: gold; font-size: 20px; }
- .head{
-	background-color:BlueViolet;
-	padding-bottom:50px;
-	margin:0px;
-	padding-top:0px;
-	padding-top:5%;
-	padding-bottom:10%;
- }
- 
- .align{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	width: 15%;
-	
- }
- .picalign{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	width: 50%;
-	display:none;
- }
- .bottom{
-	background-color:gold;
-	padding-top:30px;
-	height:auto;
-	margin-top:auto;
-	margin-bottom:auto;
-	padding-bottom:30%;
- }
- a{color:gold;}
- #geo{
-	color:BlueViolet;
-	align-content:center;
- }
- #date{
-	color:BlueViolet;
-	align:center;
-}
-.spacing{
-	margin-top:100px;
- }
- .buttons{
-	font-size:18px;
-	font-weight:bold;
- }
- .offmargin{
-	 padding-left:1px;
- }
+	<style>
+		*{margin:0px; padding:0px;}
+
+		h1 { color:gold;
+			text-align: center;}
+
+		h3 {color: gold;}
+
+		a{color:gold;}
+
+		p {color: gold; font-size: 20px; }
+
+		#date{
+			color:BlueViolet;
+			align:center;
+		}
+
+		#geo{
+			color:BlueViolet;
+			align-content:center;
+		}
+
+		.align{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width: 15%;		
+		}
+		
+		.bottom{
+			background-color:gold;
+			padding-top:30px;
+			height:auto;
+			margin-top:auto;
+			margin-bottom:auto;
+			padding-bottom:30%;
+		}
+		
+		.buttons{
+			font-size:18px;
+			font-weight:bold;
+		}
+
+		.head{
+			background-color:BlueViolet;
+			padding-bottom:50px;
+			margin:0px;
+			padding-top:0px;
+			padding-top:5%;
+			padding-bottom:10%;
+		}
+		
+		
+		.offmargin{
+			padding-left:1px;
+		}
+
+		.picalign{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width: 50%;
+			display:none;
+		}
+
+		.spacing{
+			margin-top:100px;
+		}
+		
 </style>
-<script>
-</script>
 </head>
 
 <body event>
@@ -71,32 +82,28 @@ h1 { color:gold;
 			<h3 class="offmargin">Links to our individual pages:</h3>
 			<p class="offmargin">Team member: <strong><a href="Zach.html">Zach Franke</a></strong></p><br><br>
 			<p class="offmargin">Team member: <strong><a href="Anjo.html">Anjo Marasigan</a></strong></p><br><br>
-
 			<button class="align buttons" onclick="showPic()">Show our school</button><br><br>
-			<img class="picalign"style="display:none;" id='picture' src='fontbonne.png' />
-			
+			<img class="picalign"style="display:none;" id='picture' src='fontbonne.png' />			
 	</div>
+
 	<div class="bottom">
 			<input type='button'class="align spacing buttons" onclick="document.getElementById('date').innerHTML=Date()" value='Get Time'><br>
 			<p id='date'style="text-align:center;"></p><br><br>
-
 			<button class="align spacing buttons" onclick="getLocation()">Find Me</button><br><br>
 			<p id='geo' style="text-align:center"></p>
 	</div>	
+
 		<script>
 			var response=document.getElementById("geo");
 			function getLocation(){
 				if(navigator.geolocation){
-				navigator.geolocation.getCurrentPosition(position);
-			}
-			else{response.innerHTML="Geolocation is not available from this device or browser.";
-			}
+					navigator.geolocation.getCurrentPosition(position);
+				}
+				else{response.innerHTML="Geolocation is not available from this device or browser.";	}
 			}
 			function position(loc){
 				response.innerHTML="Latitude: " + loc.coords.latitude + "<br>Longitude: " + loc.coords.longitude;
-				}
-			window.onunload=confirmExit();
-			//window.onbeforeunload=confirmExit(); Shows how the previous event handler is the one to use, this one does nothing
+			}
 			function confirmExit(){
 				return "Don't leave me";	
 			}
@@ -105,10 +112,7 @@ h1 { color:gold;
 				var img = document.getElementById('picture')
 				img.src = sourceOfPicture.replace('90x90', '225x225');
 				img.style.display = "block";
-			}  
-	  
+			}    
 		</script>
-
 	</body>
-
 </html>
