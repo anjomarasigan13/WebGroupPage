@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Zach Franke</title>
+    <title>Zach Franke</title>
+    <style>
+        body{
+            background-color:lemonchiffon;
+        }
 
-<style>
-h1 { color:dodgerblue;
- text-align: center;}
- p {color: red;font-size: 20px; text-indent:20px}
- img {display:none; width:500px; length:500px;margin-left:auto;margin-right:auto;}
- .head{
-     text-align:center;
- }
- body{
-     background-color:lemonchiffon;
- }
- .colored{
-     color:dodgerblue;
- }
- .align{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	width: 23%;
- }
-</style>
+        h1 { color:dodgerblue;
+            text-align: center;}
+        
+        img {display:none; width:500px; length:500px;margin-left:auto;margin-right:auto;}
+        
+        p {color: red;font-size: 20px; text-indent:20px}
+        
+        .align{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            width: 23%;
+        }
 
+        .colored{
+            color:dodgerblue;
+        }
+
+        .head{
+            text-align:center;
+        }
+    </style>
 </head>
 
 <body>
-<h1>Zachary Franke</h1>
-<p>Hello my name is Zachary Franke. Allow me to tell you a little bit about myself.</p><br>
-<h3 class="head">Education:</h3>
-<p>I am a junior Cyber Security student at Fontbonne University. I have learned primarily about back-end development, 
-    so this course is my first dwelling into front-end development. I hope between this course and my independent studies I can 
-    develop a working knowledge of a different kind of programming.
-</p>
-<h3 class="head">Background:</h3>
-<p>I still live in my hometown of Alton, Illinois and live at home with both of my parents and our yellow labrador Shelby. I went to Alton High where I was a part of the National Honor Society and participated actively in the choral program. </p>
-<h3 class="head">Hobbies:</h3>
-<p>In my spare time I like listening to music, eating pizza, and playing video games when time allows. My games of choice are either from the Battlefield Series or Fortnite.<br>
-In addition, I like to be outdoors and participate in sports such as hunting and fishing.</p>
+    <h1>Zachary Franke</h1>
+    <p>Hello my name is Zachary Franke. Allow me to tell you a little bit about myself.</p><br>
 
-<h3 class="head">Goals:</h3>
-<p>I hope now that I have taken most of the programming courses in the past two years that I can hopefully be more productive when learning new topics in the security field.
-    I would also like to learn more about "hacking" over the coming years as well.
-</p><br><br>
-<button class="align" id=hackerMode onclick="showPic()">Definately Don't Press!!!</button><br><br>
-<img id="pic" src="Roblox.jpg">
+    <h3 class="head">Education:</h3>
+    <p>I am a junior Cyber Security student at Fontbonne University. I have learned primarily about back-end development, 
+        so this course is my first dwelling into front-end development. I hope between this course and my independent studies I can 
+        develop a working knowledge of a different kind of programming.
+    </p>
 
+    <h3 class="head">Background:</h3>
+    <p>I still live in my hometown of Alton, Illinois and live at home with both of my parents and our yellow labrador Shelby.
+         I went to Alton High where I was a part of the National Honor Society and participated actively in the choral program. </p>
+   
+    <h3 class="head">Hobbies:</h3>
+    <p>In my spare time I like listening to music, eating pizza, and playing video games when time allows. My games of choice are either from the Battlefield Series or Fortnite.<br>
+    In addition, I like to be outdoors and participate in sports such as hunting and fishing.</p>
 
-</body>
-<script>
-    function showPic() {
-				var sourceOfPicture = "Roblox.jpg";
-				var img = document.getElementById('pic');
-				//img.src = sourceOfPicture.replace('90x90', '225x225');
-				img.style.display = "block";
-                var button=document.getElementById('hackerMode');
-                button.innerText="Gotcha";
-                button.style.width="8%";
-			}  
-</script>
+    <h3 class="head">Goals:</h3>
+    <p>I hope now that I have taken most of the programming courses in the past two years that I can hopefully be more productive when learning new topics in the security field.
+        I would also like to learn more about "hacking" over the coming years as well.
+    </p><br><br>
+
+    <button class="align" id=hackerMode onclick="showPic()">Definately Don't Press!!!</button><br><br>
+    <img id="pic" src="Roblox.jpg">
+    </body>
+    <script>
+        function showPic() {
+            var sourceOfPicture = "Roblox.jpg";
+            var img = document.getElementById('pic');                   
+            img.style.display = "block";
+            var button=document.getElementById('hackerMode');
+            button.innerText="Gotcha";
+            button.style.width="8%";
+        }  
+    </script>
 </html>
